@@ -45,22 +45,25 @@ if (numero1 == numero2){
 }
 
 function Ex3(){
-let idoso = parseFloat(prompt("Qual sua idade?: "));
-if (idoso >= 65){
+let idade = parseFloat(prompt("Qual sua idade?:"));
+
+if (idade >= 65) {
     alert("Fila prioritária");
+} else {
+    let gestante = prompt("É gestante? (s ou n)").toLowerCase();
+    
+    if (gestante === "s") {
+        alert("Fila prioritária");
     } else {
-let gestante = parseFloat(prompt("É gestante? (s ou n)"));
-if (gestante == "s"){
-    alert("fila priorirária");
-    } else { 
-let deficiencia = parseFloat(prompt("Possui deficiência? (s ou n)"));
-if(deficiencia == "s"){
-    alert("fila priorirária");
-    } else {
-    alert("fila comum");
+        let deficiencia = prompt("Possui deficiência? (s ou n)").toLowerCase();
+        
+        if (deficiencia === "s") {
+            alert("Fila prioritária");
+        } else {
+            alert("Fila comum");
+        }
     }
-  }
- }
+}
 }
 
 function Ex4(){ 
