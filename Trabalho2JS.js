@@ -94,6 +94,30 @@ function Ex5(){
     }
     }
 }
+
+function Ex6(){
+  // Definição de perguntas e respostas
+const perguntas = [
+    { pergunta: "Qual é a capital do Brasil?", resposta: "brasilia" },
+    { pergunta: "Quantos lados tem um triângulo?", resposta: "3" },
+    { pergunta: "Qual é o maior planeta do sistema solar?", resposta: "jupiter" }
+];
+
+let pontuacao = 0;
+for (let i = 0; i < perguntas.length; i++) {
+    let respostaUsuario = prompt(perguntas[i].pergunta);
+    
+    if (respostaUsuario !== null && respostaUsuario.trim().toLowerCase() === perguntas[i].resposta.toLowerCase()) {
+        alert("Correto!");
+        pontuacao++;
+    } else {
+        alert("Errado! A resposta correta é: " + perguntas[i].resposta);
+    }
+}
+
+alert("Quiz finalizado! Sua pontuação foi: " + pontuacao + " de " + perguntas.length);
+}
+
    
 
 
